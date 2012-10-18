@@ -1,0 +1,11 @@
+﻿<Window x:Class="EF_TESTE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid AutoGenerateColumns="true" Height="109" HorizontalAlignment="Left" Margin="12,22,0,0" Name="dgFisioterapeuta" VerticalAlignment="Top" Width="479" />
+        <DataGrid AutoGenerateColumns="true" Height="122" HorizontalAlignment="Left" Margin="12,177,0,0" Name="dgPaciente" VerticalAlignment="Top" Width="479" />
+        <Label Content="Fisioterapeutas" Height="28" HorizontalAlignment="Left" Margin="12,0,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Pacientes" Height="28" HorizontalAlignment="Left" Margin="12,152,0,0" Name="label2" VerticalAlignment="Top" />
+    </Grid>
+</Window>
