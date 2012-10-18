@@ -15,8 +15,8 @@ namespace EF_TESTE
     public partial class Paciente
     {
         public int Id { get; set; }
-        public int FisioterapeutaId { get; set; }
         public string Nome { get; set; }
+        public int FisioterapeutaId { get; set; }
     
         public virtual Fisioterapeuta Fisioterapeuta { get; set; }
     }

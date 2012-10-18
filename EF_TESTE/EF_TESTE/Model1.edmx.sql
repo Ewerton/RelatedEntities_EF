@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 10/18/2012 10:10:15
--- Generated from EDMX file: D:\Ewerton\ProjetosTeste\Projetos\EF_TESTE\EF_TESTE\EF_TESTE\Model1.edmx
+-- Date Created: 10/18/2012 11:48:11
+-- Generated from EDMX file: D:\Ewerton\ProjetosTeste\Projetos\EF_TESTE\RelatedEntities_EF\EF_TESTE\EF_TESTE\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,11 +17,20 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_FisioterapeutaPaciente]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PacienteSet] DROP CONSTRAINT [FK_FisioterapeutaPaciente];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FisioterapeutaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[FisioterapeutaSet];
+GO
+IF OBJECT_ID(N'[dbo].[PacienteSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PacienteSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -37,8 +46,8 @@ GO
 -- Creating table 'PacienteSet'
 CREATE TABLE [dbo].[PacienteSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [FisioterapeutaId] int  NOT NULL,
-    [Nome] nvarchar(max)  NOT NULL
+    [Nome] nvarchar(max)  NOT NULL,
+    [FisioterapeutaId] int  NOT NULL
 );
 GO
 

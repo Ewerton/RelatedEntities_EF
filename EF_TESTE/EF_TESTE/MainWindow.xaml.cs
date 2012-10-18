@@ -64,10 +64,12 @@ namespace EF_TESTE
                 f2 = ctx.Set<Fisioterapeuta>().FirstOrDefault();
             }
 
-
             Paciente p = new Paciente();
             p.Nome = "Paciente1";
-            p.Fisioterapeuta = f2;
+            //HERE ARE THE TRICK. I MANAGE THE ID OF THE RELATED ENTITIE, I DONT LET THIS WORK FOR EF.
+            p.FisioterapeutaId = f2.Id;
+
+
 
             using (var ctx = new Model1Container())
             {
